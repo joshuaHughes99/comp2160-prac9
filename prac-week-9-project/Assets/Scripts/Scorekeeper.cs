@@ -9,7 +9,7 @@ public class Scorekeeper : MonoBehaviour
     private int currentScore = 0;       // Private state of current score
     
     // Public method returns currentScore
-    public int GetCurrentScore()
+    public int GetCurrentScore
     {
         get
         {
