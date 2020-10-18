@@ -15,7 +15,7 @@ public class Scorekeeper : MonoBehaviour
             return currentScore;        // Return currentScore state in read-only
         }
     }
-
+*/
 
     // Public method increases currentScore
     public void IncreaseScore()
