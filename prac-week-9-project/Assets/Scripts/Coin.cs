@@ -5,11 +5,12 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float lifeSpan;
-
+    private Scorekeeper scorekeeperScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        scorekeeperScript = GameObject.Find("Scorekeeper").GetComponent<Scorekeeper>();
 
     }
 
@@ -28,6 +29,7 @@ public class Coin : MonoBehaviour
     {
         if (col.gameObject.tag == "Player") //if the coin collides with an object with the "player" tag
         {
+            scorekeeperScript.IncreaseScore();
             Destroy(gameObject);
         }
     }
