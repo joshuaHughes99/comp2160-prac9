@@ -8,8 +8,7 @@ public class Scorekeeper : MonoBehaviour
     public int pointGain = 1;           // Points gained per coin pickup
     private int currentScore = 0;       // Private state of current score
     
-    // Public method returns currentScore there was an error here saying it was expecting a ";"
-    /*public int GetCurrentScore()
+    public int GetCurrentScore
     {
         get
         {
