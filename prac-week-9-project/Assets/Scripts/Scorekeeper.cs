@@ -17,6 +17,7 @@ public class Scorekeeper : MonoBehaviour
         }
     }
 */
+
     // Public method increases currentScore
     public void IncreaseScore()
     {

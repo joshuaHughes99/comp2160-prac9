@@ -29,8 +29,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag == "Coin")
         {
-            //score++; //increase the score of the player, Commented out for the scorekeeper/User interface
-            //Debug.Log(score);
+            //IncreaseScore();
         }
     }
 }

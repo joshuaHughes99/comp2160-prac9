@@ -15,7 +15,7 @@ public class CoinSpawner : MonoBehaviour
     void Start()
     {
         world = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        spawnLocation = new Vector3(Random.Range(-world.x, world.x), Random.Range(-world.y, world.y), 0);
+        spawnLocation = new Vector3(Random.Range(-world.x, world.x), Random.Range(-world.y, world.y), 0); //Spawn the coin at a random place within the screens width and height
         spawnTimer = spawnCoinTimer;
     }
 
@@ -24,11 +24,11 @@ public class CoinSpawner : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
 
-        if(spawnCoinTimer <= 0)
+        if(spawnTimer <= 0)
         {
-            Coin coin = Instantiate(coinPrefab, spawnLocation, Quaternion.identity);
-            spawnTimer = spawnCoinTimer;
-            spawnLocation = new Vector3(Random.Range(-world.x, world.x), Random.Range(-world.y, world.y), 0);
+            Coin coin = Instantiate(coinPrefab, spawnLocation, Quaternion.identity); //spawn the coin at the location
+            spawnTimer = spawnCoinTimer; //reset the timer
+            spawnLocation = new Vector3(Random.Range(-world.x, world.x), Random.Range(-world.y, world.y), 0); //pick a new location for the next coin to spawn
         }
 
     }
