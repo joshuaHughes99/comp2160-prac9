@@ -8,7 +8,6 @@ public class Scorekeeper : MonoBehaviour
     public int pointGain = 1;           // Points gained per coin pickup
     private int currentScore = 0;       // Private state of current score
     
-    // Public method returns currentScore
     public int GetCurrentScore
     {
         get
@@ -16,6 +15,7 @@ public class Scorekeeper : MonoBehaviour
             return currentScore;        // Return currentScore state in read-only
         }
     }
+*/
 
     // Public method increases currentScore
     public void IncreaseScore()
